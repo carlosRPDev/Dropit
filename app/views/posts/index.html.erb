@@ -1,0 +1,11 @@
+<h1>Listing Posts</h1>
+
+<% @posts.each do |post| %>
+  <ul>
+    <%= image_tag post.file, style: "width: 250px; display: block" %>
+    <li><%= post.title %></li>
+    <li><%= post.description %></li>
+    <li><%= link_to 'show', post_path(post) %></li>
+    <hr>
+  </ul>  
+<% end %>
